@@ -36,4 +36,4 @@ Feature: Manage account on Mecury Tours web site
       | register.y      |                       12 |
       | state           | ND                       |
       | userName        | freddie@domain.com       |
-    Then the registration status is "200"
+    Then the registration status is "300"
