@@ -1,27 +1,95 @@
 [
   {
+    "comments": [
+      {
+        "line": 1,
+        "value": "#@register @ui"
+      }
+    ],
     "line": 2,
     "elements": [
       {
+        "comments": [
+          {
+            "line": 3,
+            "value": "#"
+          },
+          {
+            "line": 4,
+            "value": "#Scenario: Register a new account"
+          },
+          {
+            "line": 5,
+            "value": "#Given I am on the Mecury Tours web site"
+          },
+          {
+            "line": 6,
+            "value": "#When I request to register a new account"
+          },
+          {
+            "line": 7,
+            "value": "#Then I am asked for and enter Contact Information:"
+          },
+          {
+            "line": 8,
+            "value": "#| firstName | lastName | phone        | email                           |"
+          },
+          {
+            "line": 9,
+            "value": "#| Guinea    | Piglette | 888-555-1234 | guinea.piglette3@somedomain.com |"
+          },
+          {
+            "line": 10,
+            "value": "#And I am asked for and enter Mailing Information:"
+          },
+          {
+            "line": 11,
+            "value": "#| address1        | address2                 | city       | state | postalCode | country       |"
+          },
+          {
+            "line": 12,
+            "value": "#| The White House | 1600 Pennsylvania Ave NW | Washington | DC    |      20500 | United States |"
+          },
+          {
+            "line": 13,
+            "value": "#And I am asked for and enter User Information:"
+          },
+          {
+            "line": 14,
+            "value": "#| userName  | password    | confirmPassword |"
+          },
+          {
+            "line": 15,
+            "value": "#| piglette3 | Go#piggies1 | Go#piggies1     |"
+          },
+          {
+            "line": 16,
+            "value": "#When I submit the new registration request"
+          },
+          {
+            "line": 17,
+            "value": "#Then the registered page is displayed with salutations to \"Guinea Piglette\" and with user name \"piglette3\""
+          }
+        ],
         "before": [
           {
             "result": {
-              "duration": 7600932597,
+              "duration": 55998588,
               "status": "passed"
             },
             "match": {
-              "location": "Hooks.openBrowser()"
+              "location": "Hooks.openBrowser(Scenario)"
             }
           }
         ],
-        "line": 4,
-        "name": "A simple Google search scenario",
+        "line": 20,
+        "name": "Repeat register a new using using API testing",
         "description": "",
-        "id": "a-simple-google-search;a-simple-google-search-scenario",
+        "id": "manage-account-on-mecury-tours-web-site;repeat-register-a-new-using-using-api-testing",
         "after": [
           {
             "result": {
-              "duration": 728006946,
+              "duration": 109194,
               "status": "passed"
             },
             "match": {
@@ -34,82 +102,797 @@
         "steps": [
           {
             "result": {
-              "duration": 1501756161,
+              "duration": 455600072,
               "status": "passed"
             },
-            "line": 5,
-            "name": "I am on the main Google search webpage",
+            "line": 21,
+            "name": "I create a request for URL \"http://newtours.demoaut.com\"",
             "match": {
-              "location": "SearchSteps.i_am_on_the_main_Google_search_webpage()"
+              "arguments": [
+                {
+                  "val": "http://newtours.demoaut.com",
+                  "offset": 28
+                }
+              ],
+              "location": "MercuryToursApiSteps.i_create_a_request_for_URL(String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 346817550,
+              "duration": 873491133,
               "status": "passed"
             },
-            "line": 6,
-            "name": "I search for \"qastuffs.blogspot.com\"",
+            "line": 22,
+            "name": "I send the registration request with this user input:",
             "match": {
-              "arguments": [
-                {
-                  "val": "qastuffs.blogspot.com",
-                  "offset": 14
-                }
-              ],
-              "location": "SearchSteps.i_search_for(String)"
+              "location": "MercuryToursApiSteps.i_send_the_request_with_this_user_input(String,String\u003e)"
             },
-            "keyword": "And "
+            "rows": [
+              {
+                "cells": [
+                  "address1",
+                  "The White House"
+                ],
+                "line": 23
+              },
+              {
+                "cells": [
+                  "address2",
+                  "1600 Pennsylvania Ave NW"
+                ],
+                "line": 24
+              },
+              {
+                "cells": [
+                  "city",
+                  "Washington"
+                ],
+                "line": 25
+              },
+              {
+                "cells": [
+                  "confirmPassword",
+                  "Go#piggies1"
+                ],
+                "line": 26
+              },
+              {
+                "cells": [
+                  "country",
+                  "215"
+                ],
+                "line": 27
+              },
+              {
+                "cells": [
+                  "email",
+                  "piglette3"
+                ],
+                "line": 28
+              },
+              {
+                "cells": [
+                  "firstName",
+                  "Guinea"
+                ],
+                "line": 29
+              },
+              {
+                "cells": [
+                  "lastName",
+                  "Piglette"
+                ],
+                "line": 30
+              },
+              {
+                "cells": [
+                  "mercury",
+                  "process"
+                ],
+                "line": 31
+              },
+              {
+                "cells": [
+                  "password",
+                  "Go#piggies1"
+                ],
+                "line": 32
+              },
+              {
+                "cells": [
+                  "phone",
+                  "555-555-5555"
+                ],
+                "line": 33
+              },
+              {
+                "cells": [
+                  "postalCode",
+                  "20500"
+                ],
+                "line": 34
+              },
+              {
+                "cells": [
+                  "register.x",
+                  "21"
+                ],
+                "line": 35
+              },
+              {
+                "cells": [
+                  "register.y",
+                  "12"
+                ],
+                "line": 36
+              },
+              {
+                "cells": [
+                  "state",
+                  "ND"
+                ],
+                "line": 37
+              },
+              {
+                "cells": [
+                  "userName",
+                  "freddie@domain.com"
+                ],
+                "line": 38
+              }
+            ],
+            "keyword": "When "
           },
           {
             "result": {
-              "duration": 172016403,
+              "duration": 2238906,
               "status": "passed"
             },
-            "line": 8,
-            "name": "I click the search button",
+            "line": 39,
+            "name": "the registration status is \"200\"",
             "match": {
-              "location": "SearchSteps.i_click_the_search_button()"
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 28
+                }
+              ],
+              "location": "MercuryToursApiSteps.the_registration_status_is(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 19,
+            "name": "@api"
+          },
+          {
+            "line": 19,
+            "name": "@registerapi"
+          },
+          {
+            "line": 19,
+            "name": "@amar"
+          }
+        ]
+      }
+    ],
+    "name": "Manage account on Mecury Tours web site",
+    "description": "",
+    "id": "manage-account-on-mecury-tours-web-site",
+    "keyword": "Feature",
+    "uri": "features/AccountManagement.feature"
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 93799,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser(Scenario)"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Convert a one column list of integers into a List object of ints",
+        "description": "",
+        "id": "convert-a-data-table-to-an-object;convert-a-one-column-list-of-integers-into-a-list-object-of-ints",
+        "after": [
+          {
+            "result": {
+              "duration": 65573,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 197861,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "a list of numbers:",
+            "match": {
+              "location": "Datatable_steps.a_list_of_numbers(Integer\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "100"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "99"
+                ],
+                "line": 8
+              },
+              {
+                "cells": [
+                  "98"
+                ],
+                "line": 9
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 53314,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I sum them",
+            "match": {
+              "location": "Datatable_steps.i_sum_them()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 1556519,
-              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat steps.SearchSteps.i_click_the_first_result(SearchSteps.java:29)\r\n\tat ✽.And I click the first result(features/googleSearch.feature:9)\r\n",
-              "status": "pending"
+              "duration": 90663,
+              "status": "passed"
             },
-            "line": 9,
-            "name": "I click the first result",
+            "line": 12,
+            "name": "I should get \"297\"",
             "match": {
-              "location": "SearchSteps.i_click_the_first_result()"
+              "arguments": [
+                {
+                  "val": "297",
+                  "offset": 14
+                }
+              ],
+              "location": "Datatable_steps.i_should_get(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 71275,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser(Scenario)"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Convert a two column table to a map",
+        "description": "",
+        "id": "convert-a-data-table-to-an-object;convert-a-two-column-table-to-a-map",
+        "after": [
+          {
+            "result": {
+              "duration": 110049,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 182180,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "a price per item list:",
+            "match": {
+              "location": "Datatable_steps.a_price_per_item_list(String,Integer\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "coke",
+                  "1"
+                ],
+                "line": 16
+              },
+              {
+                "cells": [
+                  "cookie",
+                  "2"
+                ],
+                "line": 17
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 143977,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "I order \"1\" \"coke\" and \"1\" \"cookie\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 9
+                },
+                {
+                  "val": "coke",
+                  "offset": 13
+                },
+                {
+                  "val": "1",
+                  "offset": 24
+                },
+                {
+                  "val": "cookie",
+                  "offset": 28
+                }
+              ],
+              "location": "Datatable_steps.i_order_and_i_order(int,String,int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 112330,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "my total owed is \"3\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 18
+                }
+              ],
+              "location": "Datatable_steps.my_total_owed_is(int)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 134568,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser(Scenario)"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "An international coffee shop must handle currencies",
+        "description": "",
+        "id": "convert-a-data-table-to-an-object;an-international-coffee-shop-must-handle-currencies",
+        "after": [
+          {
+            "result": {
+              "duration": 86386,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8257979,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the price list for an international coffee shop",
+            "match": {
+              "location": "Datatable_steps.the_price_list_for_an_international_coffee_shop(Price\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "product",
+                  "currency",
+                  "price",
+                  "happy"
+                ],
+                "line": 25
+              },
+              {
+                "cells": [
+                  "coffee",
+                  "EUR",
+                  "1",
+                  "true"
+                ],
+                "line": 26
+              },
+              {
+                "cells": [
+                  "donut",
+                  "SEK",
+                  "18",
+                  "false"
+                ],
+                "line": 27
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 177618,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I buy \"1\" \"coffee\" and \"1\" \"donut\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 7
+                },
+                {
+                  "val": "coffee",
+                  "offset": 11
+                },
+                {
+                  "val": "1",
+                  "offset": 24
+                },
+                {
+                  "val": "donut",
+                  "offset": 28
+                }
+              ],
+              "location": "Datatable_steps.i_order_coffee_and_donut(int,String,int,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 187027,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I should pay \"1\" EUR be \"happy\" and \"18\" SEK be \"unhappy\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 14
+                },
+                {
+                  "val": "happy",
+                  "offset": 25
+                },
+                {
+                  "val": "18",
+                  "offset": 37
+                },
+                {
+                  "val": "unhappy",
+                  "offset": 49
+                }
+              ],
+              "location": "Datatable_steps.should_I_pay_EUR_and_SEK(int,String,int,String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 22,
+            "name": "@datatab3"
+          }
+        ]
+      }
+    ],
+    "name": "Convert a data table to an object",
+    "description": "",
+    "id": "convert-a-data-table-to-an-object",
+    "keyword": "Feature",
+    "uri": "features/ConvertDataTable.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@datatab"
+      },
+      {
+        "line": 2,
+        "name": "@api"
+      },
+      {
+        "line": 2,
+        "name": "@amar"
+      }
+    ]
+  },
+  {
+    "line": 3,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 77548,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser(Scenario)"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Validate a JSON array",
+        "description": "",
+        "id": "demonstrate-rest-assured;validate-a-json-array",
+        "after": [
+          {
+            "result": {
+              "duration": 136849,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4918294,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I set the JSON validation string to:",
+            "match": {
+              "location": "RestDemoSteps.i_set_the_JSON_validation_string_to(String)"
+            },
+            "keyword": "Given ",
+            "doc_string": {
+              "content_type": "",
+              "line": 7,
+              "value": "{\"employees\":[\r\n    {\"firstName\":\"John\", \"lastName\":\"Doe\"},\r\n    {\"firstName\":\"Anna\", \"lastName\":\"Smith\"},\r\n    {\"firstName\":\"Peter\",\"lastName\":\"Jones\"} \r\n]}"
+            }
+          },
+          {
+            "result": {
+              "duration": 104449957,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I validate the string by invoking end point:",
+            "match": {
+              "location": "RestDemoSteps.i_validate_the_string_by_invoking_end_point(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 15,
+              "value": "http://validate.jsontest.com/"
+            }
+          },
+          {
+            "result": {
+              "duration": 315115508,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the HTTP status code is \"200\", object is \"object\", empty is \"false\" and validate is \"true\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 25
+                },
+                {
+                  "val": "object",
+                  "offset": 42
+                },
+                {
+                  "val": "false",
+                  "offset": 61
+                },
+                {
+                  "val": "true",
+                  "offset": 85
+                }
+              ],
+              "location": "RestDemoSteps.the_HTTP_status_code_is_object_is_empty_is_and_validate_is(int,String,String,String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 179044,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser(Scenario)"
+            }
+          }
+        ],
+        "line": 21,
+        "name": "Get local weather",
+        "description": "",
+        "id": "demonstrate-rest-assured;get-local-weather",
+        "after": [
+          {
+            "result": {
+              "duration": 100641,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 442763,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I create a demo request for URL \"https://weather.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://weather.com",
+                  "offset": 33
+                }
+              ],
+              "location": "RestDemoSteps.i_create_a_request_for_URL(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 373345019,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I send that request",
+            "match": {
+              "location": "RestDemoSteps.i_send_that_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 160228,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the response status is \"200\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 24
+                }
+              ],
+              "location": "RestDemoSteps.the_response_status_is(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 165359,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the Content-Type is \"text/html; charset\u003dutf-8\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "text/html; charset\u003dutf-8",
+                  "offset": 21
+                }
+              ],
+              "location": "RestDemoSteps.the_content_type_is(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 91518,
+              "status": "passed"
             },
-            "line": 10,
-            "name": "I should land on the qastuffs blog webpage",
+            "line": 26,
+            "name": "the Content-Encoding is \"gzip\"",
             "match": {
-              "location": "SearchSteps.i_should_land_on_the_qastuffs_blog_webpage()"
+              "arguments": [
+                {
+                  "val": "gzip",
+                  "offset": 25
+                }
+              ],
+              "location": "RestDemoSteps.content_encoding_is(String)"
             },
-            "keyword": "Then "
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 20,
+            "name": "@weather"
+          },
+          {
+            "line": 20,
+            "name": "@amar"
           }
         ]
       }
     ],
-    "name": "A simple Google search",
+    "name": "Demonstrate rest-assured",
     "description": "",
-    "id": "a-simple-google-search",
+    "id": "demonstrate-rest-assured",
     "keyword": "Feature",
-    "uri": "features/googleSearch.feature",
+    "uri": "features/DemoRest-Assured.feature",
     "tags": [
       {
         "line": 1,
-        "name": "@search"
+        "name": "@rest"
+      },
+      {
+        "line": 2,
+        "name": "@api"
+      },
+      {
+        "line": 2,
+        "name": "@amar"
       }
     ]
   }

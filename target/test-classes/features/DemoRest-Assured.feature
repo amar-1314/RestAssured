@@ -1,5 +1,5 @@
 @rest
-@api
+@api @amar
 Feature: Demonstrate rest-assured
 
 Scenario: Validate a JSON array
@@ -17,7 +17,7 @@ Scenario: Validate a JSON array
     """
     Then the HTTP status code is "200", object is "object", empty is "false" and validate is "true"
     
-@weather
+@weather @amar
 Scenario: Get local weather
   Given I create a demo request for URL "https://weather.com"
   When I send that request
