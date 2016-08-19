@@ -1,0 +1,116 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 7600932597,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "A simple Google search scenario",
+        "description": "",
+        "id": "a-simple-google-search;a-simple-google-search-scenario",
+        "after": [
+          {
+            "result": {
+              "duration": 728006946,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1501756161,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am on the main Google search webpage",
+            "match": {
+              "location": "SearchSteps.i_am_on_the_main_Google_search_webpage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 346817550,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I search for \"qastuffs.blogspot.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "qastuffs.blogspot.com",
+                  "offset": 14
+                }
+              ],
+              "location": "SearchSteps.i_search_for(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 172016403,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click the search button",
+            "match": {
+              "location": "SearchSteps.i_click_the_search_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1556519,
+              "error_message": "cucumber.api.PendingException: TODO: implement me\r\n\tat steps.SearchSteps.i_click_the_first_result(SearchSteps.java:29)\r\n\tat ✽.And I click the first result(features/googleSearch.feature:9)\r\n",
+              "status": "pending"
+            },
+            "line": 9,
+            "name": "I click the first result",
+            "match": {
+              "location": "SearchSteps.i_click_the_first_result()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "I should land on the qastuffs blog webpage",
+            "match": {
+              "location": "SearchSteps.i_should_land_on_the_qastuffs_blog_webpage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "A simple Google search",
+    "description": "",
+    "id": "a-simple-google-search",
+    "keyword": "Feature",
+    "uri": "features/googleSearch.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@search"
+      }
+    ]
+  }
+]
