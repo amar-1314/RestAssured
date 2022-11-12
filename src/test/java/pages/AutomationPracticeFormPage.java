@@ -53,7 +53,6 @@ public class AutomationPracticeFormPage {
 		public boolean selectGender(String gender){
 			List<WebElement> radioButtons = getInputsBasedOnType(sexLabel,"radio");
 			log.info("Number of gender radio buttons is " + radioButtons.size());
-			log.info("Test test log");
 			if (gender.equals("male")) {
 				radioButtons.get(0).click();
 				return radioButtons.get(0).isSelected();
