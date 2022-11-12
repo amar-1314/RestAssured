@@ -18,23 +18,23 @@ public class AutomationPracticeFormPage {
 
 		protected WebDriver driver;
 		protected Logger log;
-		
+
 		@FindBy(xpath = "//label[contains(text(),'Sex')]") private WebElement sexLabel;
 		@FindBy(css = "#content > form > fieldset > div:nth-child(8) > input[type='radio']") private List<WebElement> experienceRadio;
 		@FindBy(xpath = "//label[contains(text(),'Years of Experience')]") private WebElement yearsExperLabel;
 		@FindBy(xpath = "//label[contains(text(),'Profession')]") private WebElement professionLabel;
 		@FindBy(xpath = "//label[contains(text(),'Automation Tool')]") private WebElement toolLabel;
-		
+
 		public AutomationPracticeFormPage(WebDriver driver) {
 			this.driver = driver;
 			this.log = Logger.getLogger(AutomationPracticeFormPage.class);
-					
-			Assert.assertTrue("Page title '" + driver.getTitle() + "' doesn't match expected ", 
+
+			Assert.assertTrue("Page title '" + driver.getTitle() + "' doesn't match expected ",
 					driver.getTitle().equals("TOOLSQA | Free QA Test Automation Tools Tutorial | Demo Form for practicing Selenium Automation"));
-			
+
 			PageFactory.initElements(driver,  this);
 		}
-		
+
 		public boolean selectUnselectedGender() {
 			List<WebElement> radioButtons = getInputsBasedOnType(sexLabel,"radio");
 			log.info("Number of gender radio buttons is " + radioButtons.size());
@@ -49,7 +49,7 @@ public class AutomationPracticeFormPage {
 				return radioButtons.get(0).isSelected();
 			}
 		}
-		
+
 		public boolean selectGender(String gender){
 			List<WebElement> radioButtons = getInputsBasedOnType(sexLabel,"radio");
 			log.info("Number of gender radio buttons is " + radioButtons.size());
@@ -64,13 +64,13 @@ public class AutomationPracticeFormPage {
 				return false;
 			}
 		}
-		
+
 		public boolean select_years_experience(int years) {
 			List<WebElement> radioButtons = getInputsBasedOnType(yearsExperLabel,"radio");
 			radioButtons.get((years - 1)).click();
 			return radioButtons.get((years - 1)).isSelected();
 		}
-		
+
 		public boolean select_profession(String profession) {
 			List<WebElement> checkBoxes = getInputsBasedOnType(professionLabel,"checkbox");
 			if (profession.equalsIgnoreCase("manual tester")) {
@@ -84,7 +84,7 @@ public class AutomationPracticeFormPage {
 				return false;
 			}
 		}
-		
+
 		public boolean select_automation_tool(String tool){
 			List<WebElement> checkBoxes = getInputsBasedOnType(toolLabel,"checkbox");
 			int toolIndex = getAutomationToolIndex(tool);
@@ -95,7 +95,7 @@ public class AutomationPracticeFormPage {
 			checkBoxes.get(toolIndex).click();
 			return checkBoxes.get(toolIndex).isSelected();
 		}
-		
+
 		private int getAutomationToolIndex(String tool) {
 			String[] tools = {"QTP","Selenium IDE","Selenium WebDriver"};
 			for(int i=0; i<tools.length; i++){
@@ -105,7 +105,7 @@ public class AutomationPracticeFormPage {
 			}
 			return -1; // tool is invalid
 		}
-		
+
 		/*
 		 *  The label is under a strong which is a peer of the input elements. Find the label then find its grandparent then find and
 		 *  return the input elements as a list.
